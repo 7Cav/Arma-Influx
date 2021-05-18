@@ -81,8 +81,8 @@ func sendToInflux(data string) {
 	token := fields[1]
 	org := fields[2]
 	bucket := fields[3]
-	// profile := fields[4]
-	// locality := fields[5]
+	profile := fields[4]
+	locality := fields[5]
 	metric := fields[6]
 	value := fields[7]
 
@@ -91,7 +91,7 @@ func sendToInflux(data string) {
 	writeAPI := client.WriteAPI(org, bucket)
 
 	p := influxdb2.NewPoint(metric,
-		map[string]string{"unit": metric},
+		map[string]string{"profile": profile, "locality": locality},
 		map[string]interface{}{"count": int_value},
 		time.Now())
 
