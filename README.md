@@ -1,5 +1,5 @@
-# a3-fone-home
+# Arma-Influx
 
-A3 extension for linux 64-bit server clients, using Golang
+A3 extension for sending metrics to InfluxDB using Golang
 
 > See more: https://github.com/code34/armago_x64
